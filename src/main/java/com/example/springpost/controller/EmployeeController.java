@@ -16,6 +16,11 @@ import java.util.Map;
 public class EmployeeController {
     @Autowired
     private EmployeeRepository employeeRepository;
+    @GetMapping("/")
+    public String getMessage() {
+
+        return "Mon application est là";
+    }
 
     @GetMapping("/employees")
     public List<Employee> getAllEmployees() {
